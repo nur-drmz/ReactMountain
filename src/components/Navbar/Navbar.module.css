@@ -1,47 +1,108 @@
 @import "../../vars.css";
 
+@font-face {
+  font-family: Cabinet Grotesk;
+  src: url(../../../assets/Fonts/cabinet-grotask/CabinetGrotesk-Medium.woff);
+}
+
 .navbar {
-  position: relative;
+  margin: 40px 40px;
+  height: 112px;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+  z-index: 1000;
+  width: 100%; /* Ekledim */
+  background-color: transparent; /* Arka plan rengini ayarlayabilirsiniz */
+  
+}
+.navbar::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-text); /* İstediğiniz çizgi rengi */
+}
+.header {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 0 0 104px;
+  padding: 40px 156px;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
 }
 
 .title {
-  font-size: 30px;
-  font-weight: 600;
+  width: 300px;
+  height: 30px;
+  font-family: Cabinet Grotesk;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 29.76px;
+  color: #fff;
   text-decoration: none;
-  color: var(--color-text);
 }
-
 
 .menuBtn {
   display: none;
 }
 
 .menu {
+  width: 1211px;
+  height: 26px;
+  flex-grow: 1;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 0;
 }
 
 .menuItems {
   display: flex;
-  gap: 47px;
+  gap: 48px;
   list-style: none;
 }
 
 .menuItems a {
-  font-size: 25px;
+  font-family: Rajdhani;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
   color: var(--color-text);
   text-decoration: none;
+}
+
+.Youtube {
+  width: 157px;
+  height: 48px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 24px;
+  border-radius: 12px;
 }
 
 @media screen and (max-width: 830px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px; /* Örnek bir padding değeri */
+    background-color: rgba(0, 0, 0, 0.8); /* Mobilde arka plan rengi */
   }
 
   .menu {
@@ -52,6 +113,8 @@
     align-items: flex-end;
     gap: 11px;
     z-index: 3;
+    background-color: rgba(0, 0, 0, 0.8); /* Mobilde arka plan rengi */
+    padding: 10px; /* Örnek bir padding değeri */
   }
 
   .menuBtn {

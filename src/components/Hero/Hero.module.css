@@ -1,111 +1,178 @@
 @import "../../vars.css";
 
-.container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 49px;
-  z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+@font-face {
+  font-family: Cabinet Grotesk;
+  src: url(../../../assets/Fonts/cabinet-grotask/CabinetGrotesk-Extrabold.woff);
 }
 
+.container {
+  position: relative;
+  background-image: url('assets/hero/background.png'); 
+  background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: auto; 
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 58px 152px 0 rgba(0, 107, 184, 0.42);
+  overflow: hidden;
+}
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: var(--color-text);
+  position: relative;
   z-index: 1;
 }
 
 .title {
-  font-size: 72px;
-  font-weight: 900;
-  margin-bottom: 33px;
-  font-family: var(--font-roboto);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(255, 255, 255, 0) 120%
-  );
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.description {
-  font-size: 30px;
-  font-family: var(--font-roboto);
-  margin-bottom: 52px;
-}
-
-.contactBtn {
-  text-decoration: none;
-  background-color: var(--color-primary);
+  margin: 0 1.04%;
+  padding: 25% 0 5%;
   color: var(--color-text);
-  border-radius: 100px;
-  font-size: 30px;
-  font-weight: 600;
-  padding: 17px 26px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 2.93vw;
+  font-weight: 700;
+  line-height: 3.36vw;
+  letter-spacing: 0em;
+  text-align: center;
+  width: auto;
+  opacity: 0.6;
+  top: 0; 
+  left: 38%; 
+  transform: translateY(-50%); 
+  position: absolute; 
 }
 
-.heroImg {
-  width: 50%;
-  z-index: 1;
-
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+.subtitle {
+  position: relative;
+  margin: 0;
+  padding: 10% 0;
+  display: flex; 
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: 156px;
+  line-height: 156px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--color-text);
+  white-space: nowrap;
+  opacity: 0.8;
+  z-index: 20;
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  position: absolute; 
 }
 
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(0, 10px);
-  }
-  100% {
-    transform: translate(0, -0px);
-  }
+.coverimg {
+  position: relative;
+  top: 0; /* Güncellenen stil */
+  width: 100%;
+  height: 100%; /* Yeni eklenen stil */
+  z-index: 50;
 }
 
-.topBlur {
+.playButtonContainer {
   position: absolute;
-  width: 50vw;
-  height: 50vw;
-  min-width: 350px;
-  min-width: 350px;
-  top: -128px;
-  left: -10vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
+  top: 454px; /* Yeni eklenen stil */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
-.bottomBlur {
+.playButton {
+  width: 7.08vw; /* Orantılı width ayarı */
+  height: 7.08vw; /* Orantılı height ayarı */
+  cursor: pointer;
+}
+
+/* Mevcut stiller */
+
+
+.videoSection {
   position: absolute;
-  width: 70vw;
-  height: 50vw;
-  min-width: 350px;
-  min-width: 250px;
-  top: 246px;
-  right: -25vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
+  top: 50%; /* Orantılı top değeri ayarı */
+  left: 50%; /* Orantılı left değeri ayarı */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.92vw; /* Orantılı gap ayarı */
+  width: 44.74vw; /* Orantılı width ayarı */
+  height: 16.3vw; /* Orantılı height ayarı */
+  margin: 0 auto; /* Merkezde konumlandırma */
+  z-index: 1000; /* Güncellenen z-index değeri */
+}
+.videoCard {
+  width: 27.08vw; /* Orantılı width ayarı */
+  height: 32.92vw; /* Orantılı height ayarı */
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.92vw; /* Orantılı gap ayarı */
+  padding: 0; /* Padding değeri kaldırıldı */
+  border: none; /* Border değeri kaldırıldı */
+  background-color: transparent; /* Arkaplan rengi transparan yapıldı */
+  -webkit-backdrop-filter: none; /* Backdrop filter kaldırıldı */
+  backdrop-filter: none; /* Backdrop filter kaldırıldı */
+  box-shadow: none; /* Box shadow kaldırıldı */
 }
 
-@media screen and (max-width: 830px) {
-  .container {
-    flex-direction: column-reverse;
-  }
+.videoImage {
+  width: 15.83vw; /* Orantılı width ayarı */
+  height: 16.67vw; /* Orantılı height ayarı */
+  border-radius: 1.56vw; /* Orantılı border-radius ayarı */
+  object-fit: cover;
+}
+.videoDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-  .content {
-    align-items: center;
-  }
+.videoIcon {
+  font-size: 2.08vw; /* Orantılı font-size ayarı */
+  margin-bottom: 1.04vw; /* Orantılı margin-bottom ayarı */
+}
+
+.videoCaption {
+  font-size: 1.56vw; /* Orantılı font-size ayarı */
+}
+
+.videoDescription {
+  width: 45%;
+}
+
+.videoTitle {
+  font-size: 2.08vw; /* Orantılı font-size ayarı */
+  font-weight: 700;
+}
+
+.videoText {
+  font-size: 1.04vw; /* Orantılı font-size ayarı */
+  margin-top: 0.52vw; /* Orantılı margin-top ayarı */
+}
+.blogText {
+  position: absolute;
+  top: 10%; /* Orantılı top değeri ayarı */
+  font-size: 2.5vw; /* Dilediğiniz font-size ayarı */
+  font-weight: bold;
+  color: white; /* Dilediğiniz renk ayarı */
+  z-index: 900; /* Güncellenen z-index değeri */
+}
+
+.tentImage {
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Orantılı left değeri ayarı */
+  transform: translate(-50%, -50%);
+  width: 30%; /* Dilediğiniz genişlik ayarı */
+  height: auto; /* Yükseklik otomatik ayarlandı */
+  text-align: center;
+  z-index: 1000; /* Güncellenen z-index değeri */
 }

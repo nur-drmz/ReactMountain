@@ -8,8 +8,10 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
+      <div className={styles.header}>
+      <img className={styles.logo} src={getImageUrl("nav/Mark.png")} alt="logo" onClick={() => window.location.href = "/"} />
       <a className={styles.title} href="/">
-        Portfolio
+        Beau Mountain
       </a>
       <div className={styles.menu}>
         <img
@@ -26,19 +28,16 @@ export const Navbar = () => {
           className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
           onClick={() => setMenuOpen(false)}
         >
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#experience">Experience</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#about">Contact</a>
-          </li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#package">Package</a></li>
+          <li><a href="#ticket">Ticket</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+          <li><a href="#blog">Blog</a></li>
         </ul>
+      </div>
+      <img className={styles.Youtube} src={getImageUrl("nav/Button.png")} alt="Youtube" onClick={() => window.location.href = "/"} />
+
       </div>
     </nav>
   );
