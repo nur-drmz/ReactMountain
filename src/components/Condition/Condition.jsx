@@ -8,7 +8,7 @@ export const Condition = () => {
   
     return (
         <div className={styles.container}>
-            <h1>Today Section</h1>
+          
         </div>
     );
 };
