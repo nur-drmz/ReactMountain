@@ -9,8 +9,9 @@ function App() {
        <div className="app-container">
         <Navbar />
         <Hero />
+        <Condition/>
        </div>
-       <Condition/>
+      
       
     </div>
   );

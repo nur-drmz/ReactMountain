@@ -92,18 +92,19 @@
 
 .videoSection {
   position: absolute;
-  top: 50%; /* Orantılı top değeri ayarı */
-  left: 50%; /* Orantılı left değeri ayarı */
-  transform: translate(-50%, -50%);
+  top: 45%; /* Güncellenen top değeri */
+  left: 50%;
+  transform: translate(-80%, -50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2.92vw; /* Orantılı gap ayarı */
-  width: 44.74vw; /* Orantılı width ayarı */
-  height: 16.3vw; /* Orantılı height ayarı */
-  margin: 0 auto; /* Merkezde konumlandırma */
-  z-index: 1000; /* Güncellenen z-index değeri */
+  gap: 2.92vw;
+  width: 44.74vw;
+  height: 16.3vw;
+  margin: 20px auto 0; /* Güncellenen margin değeri */
+  z-index: 100;
 }
+
 .videoCard {
   width: 27.08vw; /* Orantılı width ayarı */
   height: 32.92vw; /* Orantılı height ayarı */
@@ -122,6 +123,8 @@
 }
 
 .videoImage {
+  position: absolute;
+  left: -4%;
   width: 15.83vw; /* Orantılı width ayarı */
   height: 16.67vw; /* Orantılı height ayarı */
   border-radius: 1.56vw; /* Orantılı border-radius ayarı */
@@ -141,11 +144,20 @@
 }
 
 .videoCaption {
-  font-size: 1.56vw; /* Orantılı font-size ayarı */
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 18px; 
+  line-height: 29.76px;
+  font-weight:500;
+  text-align: center;
+  color: var(--color-text);
+
 }
 
 .videoDescription {
-  width: 45%;
+  width: 155%;
 }
 
 .videoTitle {
@@ -157,22 +169,52 @@
   font-size: 1.04vw; /* Orantılı font-size ayarı */
   margin-top: 0.52vw; /* Orantılı margin-top ayarı */
 }
+
 .blogText {
   position: absolute;
-  top: 10%; /* Orantılı top değeri ayarı */
-  font-size: 2.5vw; /* Dilediğiniz font-size ayarı */
+  top: -35px; 
+  font-size: 15px;
   font-weight: bold;
-  color: white; /* Dilediğiniz renk ayarı */
-  z-index: 900; /* Güncellenen z-index değeri */
+  color: white;
+  z-index: 100;
 }
 
 .tentImage {
   position: absolute;
-  top: 50%;
-  left: 50%; /* Orantılı left değeri ayarı */
+  top: 57%;
+  left: 158%;
   transform: translate(-50%, -50%);
-  width: 30%; /* Dilediğiniz genişlik ayarı */
-  height: auto; /* Yükseklik otomatik ayarlandı */
+  width: 70%;
+  height: auto;
   text-align: center;
-  z-index: 1000; /* Güncellenen z-index değeri */
+  z-index: 100;
+  overflow: hidden;
+}
+
+.tentImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 190%;
+  background-image: url('assets/hero/Blur Bg.png'); /* Blur efektini elde etmek için kullanılan bir resim */
+  background-size: cover;
+  filter: blur(50px); /* Blur miktarını ayarlayabilirsiniz */
+  z-index: -1;
+}
+
+.tentImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi container'a sığdırırken oranlarını korur */
+}
+
+.tentImage p {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }
